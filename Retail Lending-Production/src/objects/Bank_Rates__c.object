@@ -1,0 +1,1962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>ADF__c</fullName>
+        <externalId>false</externalId>
+        <label>ADF</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ANCIL_CHG__c</fullName>
+        <externalId>false</externalId>
+        <label>Ancil.Chg</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NOT ALL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ALL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STANDARD CHARTERED</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INDIABULLS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEUTSCHE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ING VYSYA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KOTAK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITIBANK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEUTSCHE POST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EDELWEISS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Selection__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Bank Selection</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bank_company__c</fullName>
+        <description>Enter the bank name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the Bank&quot;Eg:Axis Bank&quot;.</inlineHelpText>
+        <label>Banker company</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Banking_individual__c</fullName>
+        <externalId>false</externalId>
+        <label>Banker Individual</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Banks_list__c</fullName>
+        <externalId>false</externalId>
+        <label>Banks List</label>
+        <picklist>
+            <picklistValues>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>STAN-CHART</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>INDIABULLS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEUTSCHE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ING-VYSYA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>KOTAK</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DEUTSCHE POST</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EDELWEISS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Base_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Rate</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>City_of_property__c</fullName>
+        <externalId>false</externalId>
+        <label>City of property</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Bangalore</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kolkata</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delhi &amp; NCR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chennai</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ahmedabad</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pune</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jaipur</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>City_of_work__c</fullName>
+        <externalId>false</externalId>
+        <label>City of  work</label>
+        <picklist>
+            <controllingField>Residency_Status__c</controllingField>
+            <picklistValues>
+                <fullName>Bangalore</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hyderabad</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kolkata</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delhi&amp;NCR</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chennai</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ahmedabad</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pune</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jaipur</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Belgium</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canada</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denmark</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>France</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Germany</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HongKong</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indonesia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Italy</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Japan</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kuwait</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Malaysia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Netherlands</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Zealand</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oman</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qatar</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Russia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saudi Arabia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Singapore</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spain</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Switzerland</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UAE</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UK</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USA</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company_type__c</fullName>
+        <description>Enter related value from list</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Company Which He/She Working for&quot;Eg:Agriculture,Banking,etc&quot;.</inlineHelpText>
+        <label>Company type</label>
+        <picklist>
+            <controllingField>Employment__c</controllingField>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietorship</fullName>
+                <controllingFieldValues>Self Employed Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership</fullName>
+                <controllingFieldValues>Self Employed Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Private Ltd</fullName>
+                <controllingFieldValues>Self Employed Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietorship.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Private Ltd.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Ltd.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MNC.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Govt.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietorship,</fullName>
+                <controllingFieldValues>Self Employed Non Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership,</fullName>
+                <controllingFieldValues>Self Employed Non Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Private Ltd,</fullName>
+                <controllingFieldValues>Self Employed Non Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_co_y1__c</fullName>
+        <externalId>false</externalId>
+        <label>Depriciation co y1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_y1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter current year depreciation</inlineHelpText>
+        <label>Depriciation y1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Display_Banks__c</fullName>
+        <externalId>false</externalId>
+        <label>Display Banks</label>
+        <picklist>
+            <picklistValues>
+                <fullName>10</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>40</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Employment__c</fullName>
+        <description>Choose type for  employment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Type of Employment like&quot;Salaried,Salaried Professional,Self Employed Business&quot; etc.</inlineHelpText>
+        <label>Type Of Employment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self Employed Professional</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self Employed Non Professional</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Maker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Franking_Fee__c</fullName>
+        <externalId>false</externalId>
+        <label>Franking  Fee</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Funding_Upto__c</fullName>
+        <externalId>false</externalId>
+        <label>Funding Upto</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Profit_Yr_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the gross receipts/Turn over of the current year</inlineHelpText>
+        <label>Gross Profit Yr 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Profit_co_y1__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Profit  co y1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Insurance__c</fullName>
+        <externalId>false</externalId>
+        <label>Insurance</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Term__c</fullName>
+        <description>Enter the Period time for lease</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter tenure of lease .</inlineHelpText>
+        <label>Lease Term(1)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_amount1__c</fullName>
+        <description>Enter the amount for monthly rent</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the amount of monthly rent&quot;Eg:Rs 40000&quot;.</inlineHelpText>
+        <label>Lease amount1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lease_due_term1__c</fullName>
+        <description>Enter the period for unexpired tenure</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Less than 11 months cant be treated as Loan</inlineHelpText>
+        <label>lease due term1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lessee_name1__c</fullName>
+        <externalId>false</externalId>
+        <label>Lessee name1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Requested_SAL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the amount for the loan requested Eg: Rs 400000.</inlineHelpText>
+        <label>Loan Requested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Tenure_Requested__c</fullName>
+        <description>Enter the reason for loan tenure request</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter period for loan tenure requested&quot;Eg:6 Months&quot;.</inlineHelpText>
+        <label>Loan Tenure Requested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Age</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Builtup_Area__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Builtup Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Loan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Max_Plot_size__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Plot size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Purchase_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Purchase Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Max_Salary__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Salary</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Max_Tenure__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please Enter In Months</inlineHelpText>
+        <label>Max Tenure</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Age__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Age</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Builtup_Area__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Builtup Area</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Loan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Loan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Min_Plot_size__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Plot size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Purchase_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Purchase Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Min_Salary__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Salary</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Min_Tenure__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please Enter In Months</inlineHelpText>
+        <label>Min Tenure</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mort__c</fullName>
+        <externalId>false</externalId>
+        <label>Mortg Fee</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>P__c</fullName>
+        <externalId>false</externalId>
+        <label>Parallel Funding</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PreClosure__c</fullName>
+        <externalId>false</externalId>
+        <label>PreClosure</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proc_Fee_incl_tax__c</fullName>
+        <externalId>false</externalId>
+        <label>Proc Fee(incl tax)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <description>The products of Retail lending</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the product name Eg: Home Loan,Balance Transfer,etc.</inlineHelpText>
+        <label>Select the Loan</label>
+        <picklist>
+            <controllingField>Property_use__c</controllingField>
+            <picklistValues>
+                <fullName>Home Loan / Property Selected</fullName>
+                <controllingFieldValues>Residential</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Loan / Property Not Selected</fullName>
+                <controllingFieldValues>Residential</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Loan Balance Transfer</fullName>
+                <controllingFieldValues>Residential</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan against property</fullName>
+                <controllingFieldValues>Residential</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan against property (BT / BTTP)</fullName>
+                <controllingFieldValues>Residential</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lease Rental Discounting</fullName>
+                <controllingFieldValues>Residential</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Loan / Property Selected ( C )</fullName>
+                <controllingFieldValues>Commercial</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Loan / Property Not Selected ( C )</fullName>
+                <controllingFieldValues>Commercial</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Loan Balance Transfer ( C )</fullName>
+                <controllingFieldValues>Commercial</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan against property ( C )</fullName>
+                <controllingFieldValues>Commercial</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan against property (BT / BTTP) ( C )</fullName>
+                <controllingFieldValues>Commercial</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lease Rental Discounting ( C )</fullName>
+                <controllingFieldValues>Commercial</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Bank Rates</relationshipLabel>
+        <relationshipName>Bank_Rates</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Project_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Project Approved</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_Name__c</fullName>
+        <description>Enter the project name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the project name:Eg:My homes&quot;.</inlineHelpText>
+        <label>Project Name</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Project_appr__c</fullName>
+        <description>Confirm Builder property approved are not</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose whether property approved by builder&quot;Eg:Yes/No&quot;.</inlineHelpText>
+        <label>Project appr</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under Process</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Project_appr_banks__c</fullName>
+        <description>Enter the bank name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the Bank&quot;Eg:Axis Bank&quot;.</inlineHelpText>
+        <label>Project appr bank</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prop_Age__c</fullName>
+        <description>Enter the age of the property</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the age of the property&quot;Eg:25 yrs,30 yrs&quot;.</inlineHelpText>
+        <label>Prop Age</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prop_Builtup__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the size of Built-up area&quot;Eg:1000 Sft&quot;.</inlineHelpText>
+        <label>Prop_Built-up</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prop_Community_Name__c</fullName>
+        <description>Enter the community name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the gated community&quot;Eg:Sweet Homes&quot;.</inlineHelpText>
+        <label>Prop Community Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prop_Const_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Prop Const Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Ready</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prop_Deviation__c</fullName>
+        <description>Enter the deviation in the filed</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose whether there is deviation in plan &quot;Eg:Yes/No&quot;.</inlineHelpText>
+        <label>Prop Deviation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prop_Deviation_p__c</fullName>
+        <externalId>false</externalId>
+        <label>Prop Deviation%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Prop_Gated_Community__c</fullName>
+        <description>Choose whether it is a gated community or not</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose whether  it is Gated Community&quot;Eg:Yes/No&quot;.</inlineHelpText>
+        <label>Prop Gated Community</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prop_Location__c</fullName>
+        <description>Enter the location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the location&quot;Eg:Indira nagar ,koramangla etc&quot;.</inlineHelpText>
+        <label>Prop Location</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prop_Plot_size__c</fullName>
+        <description>Enter the Size of the plot</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the size of Plot &quot;Eg:250 Sft,300 Sft&quot;.</inlineHelpText>
+        <label>Prop Plot size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prop_Purchase_Through__c</fullName>
+        <externalId>false</externalId>
+        <label>Prop Purchase Through</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Builder Resale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seller Resale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prop_Purchase_from__c</fullName>
+        <description>Choose the type of property</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the type of property&quot;Eg:Assignment Property,Builder Property&quot;.</inlineHelpText>
+        <label>Prop Purchase From</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Builder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prop_Type__c</fullName>
+        <description>choose the property type</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the type of the property&quot;Eg:Apartment,Land,Composite,Etc&quot;.</inlineHelpText>
+        <label>Prop Type</label>
+        <picklist>
+            <controllingField>Product_Name__c</controllingField>
+            <picklistValues>
+                <fullName>Apartment / Villa</fullName>
+                <controllingFieldValues>Home Loan / Property Not Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan / Property Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer</controllingFieldValues>
+                <controllingFieldValues>Lease Rental Discounting</controllingFieldValues>
+                <controllingFieldValues>Loan against property</controllingFieldValues>
+                <controllingFieldValues>Loan against property (BT / BTTP)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Independent House</fullName>
+                <controllingFieldValues>Home Loan / Property Not Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan / Property Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer</controllingFieldValues>
+                <controllingFieldValues>Lease Rental Discounting</controllingFieldValues>
+                <controllingFieldValues>Loan against property</controllingFieldValues>
+                <controllingFieldValues>Loan against property (BT / BTTP)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Land / Plot</fullName>
+                <controllingFieldValues>Home Loan / Property Not Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan / Property Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer</controllingFieldValues>
+                <controllingFieldValues>Loan against property</controllingFieldValues>
+                <controllingFieldValues>Loan against property (BT / BTTP)</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self Construction</fullName>
+                <controllingFieldValues>Home Loan / Property Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Composite</fullName>
+                <controllingFieldValues>Home Loan / Property Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extension / Renovation</fullName>
+                <controllingFieldValues>Home Loan / Property Selected</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial - Office / Showroom / Shop</fullName>
+                <controllingFieldValues>Home Loan / Property Not Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan / Property Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer ( C )</controllingFieldValues>
+                <controllingFieldValues>Lease Rental Discounting ( C )</controllingFieldValues>
+                <controllingFieldValues>Loan against property ( C )</controllingFieldValues>
+                <controllingFieldValues>Loan against property (BT / BTTP) ( C )</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial - Building</fullName>
+                <controllingFieldValues>Home Loan / Property Not Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan / Property Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer ( C )</controllingFieldValues>
+                <controllingFieldValues>Lease Rental Discounting ( C )</controllingFieldValues>
+                <controllingFieldValues>Loan against property ( C )</controllingFieldValues>
+                <controllingFieldValues>Loan against property (BT / BTTP) ( C )</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial - Land</fullName>
+                <controllingFieldValues>Home Loan / Property Not Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan / Property Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer ( C )</controllingFieldValues>
+                <controllingFieldValues>Lease Rental Discounting ( C )</controllingFieldValues>
+                <controllingFieldValues>Loan against property ( C )</controllingFieldValues>
+                <controllingFieldValues>Loan against property (BT / BTTP) ( C )</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial - Construction on own land</fullName>
+                <controllingFieldValues>Home Loan / Property Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer ( C )</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial - Land Purchase+Construction</fullName>
+                <controllingFieldValues>Home Loan / Property Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer ( C )</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial - Extension / Renovation</fullName>
+                <controllingFieldValues>Home Loan / Property Selected ( C )</controllingFieldValues>
+                <controllingFieldValues>Home Loan Balance Transfer ( C )</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prop_cmv__c</fullName>
+        <description>Enter the current Market Value amount</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the amount for Current market value&quot;Eg:Rs 800000&quot;.</inlineHelpText>
+        <label>Prop CMV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Prop_occupancy__c</fullName>
+        <description>Choose the type of the property</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the type of the property&quot;Eg:Commercial/rented out,Residential/Rented out&quot;.</inlineHelpText>
+        <label>Prop Occupancy</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Self occupied</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rented Out</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vacant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Prop_total_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Prop total Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_use__c</fullName>
+        <externalId>false</externalId>
+        <label>Property use</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Residential</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rate_OD_Loan__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate O/D Loan</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rate_Std__c</fullName>
+        <externalId>false</externalId>
+        <label>ROI</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Rented_to1__c</fullName>
+        <description>Choose whether the property is rented to a company are not</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose whether the property is rented to a company &quot;Eg:Yes/No&quot;.</inlineHelpText>
+        <label>Leased to 1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Known Brand-Properitorship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Known Brand-Partnership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Known Brand-Pvt Ltd</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Limited Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MNC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Govt</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Properitorship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pvt Ltd</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Residency_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Residency Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NRI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foriegn Nation of Indian Orgin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Salary_gross__c</fullName>
+        <externalId>false</externalId>
+        <label>salary gross</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Slab_Rates__c</fullName>
+        <externalId>false</externalId>
+        <label>Slab Rates</label>
+        <picklist>
+            <picklistValues>
+                <fullName>&lt;25 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&lt;30 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25-75 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>30-75 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>75-100 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&lt;75 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt;75 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&lt;100 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt;100 lacs</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status_of_Property__c</fullName>
+        <externalId>false</externalId>
+        <label>Status of Property</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Ready</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Teaser_Fixed__c</fullName>
+        <externalId>false</externalId>
+        <label>Teaser Fixed</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Tenure_in_years__c</fullName>
+        <externalId>false</externalId>
+        <label>Tenure in years</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 year</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>16 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt; 20 years</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Title</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type_of_Loan__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Rates</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Regular Fixed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regular Floating</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Over Draft Floating</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regular Semi-Fixed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Over draft Semi-Fixed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>MultiselectPicklist</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>dob__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Birth</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>itr_co_y1__c</fullName>
+        <externalId>false</externalId>
+        <label>itr co y1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>itr_y1__c</fullName>
+        <description>Enter the amount for IT Returns</description>
+        <externalId>false</externalId>
+        <label>itr y1</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>type_of_industry__c</fullName>
+        <externalId>false</externalId>
+        <label>type of industry</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food&amp;beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Profit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <label>Bank Rate</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Bank Rates Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Bank Rates</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

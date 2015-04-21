@@ -1,0 +1,2259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Achieved_for_Current_Month__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Achieved for Current Month</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Achievement_Criteria__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;), 1, if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;), 2, if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;), 3, if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;), 4, 
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;),5,
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;),6,
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;),7,
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;),8,
+if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;),9,
+if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;),10,
+if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;),11,
+if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp; ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;),12,
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp;ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;),13,
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp;ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Disbursement&apos;),14,
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp;ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;),15,
+if(ispickval(Achievement__c,&apos;Payment With in the Slab Range&apos;) &amp;&amp; ispickval(Commission_paid_on__c,&apos;Incremental&apos;) &amp;&amp;ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_based_on__c,&apos;Revenue&apos;),16,0
+))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Achievement Criteria</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Achievement__c</fullName>
+        <externalId>false</externalId>
+        <label>Achievement Payment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Payment on Slab Achievement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Payment With in the Slab Range</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Paid_on_Inc_Ran__c</fullName>
+        <description>These field is used for Incremental slab Range Amount in disbursement and revenue generated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount Paid for slab on Incremental-&gt; Slab Range-&gt;Amount-&gt;Disbursement &amp; Revenue Generated Per 100-?</inlineHelpText>
+        <label>Amount Paid on Inc/Ran</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount_for_FPSlabAch__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Amount_for_Slab_Comparison__c &gt;=Max_Slab1__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab2__c, Max_Slab1__c , if( Amount_for_Slab_Comparison__c &gt;=Max_Slab2__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab3__c, Max_Slab2__c ,if( Amount_for_Slab_Comparison__c&gt;=Max_Slab3__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab4__c, Max_Slab3__c , if( Amount_for_Slab_Comparison__c &gt;=Max_Slab4__c &amp;&amp; Amount_for_Slab_Comparison__c &lt; Max_Slab5__c, Max_Slab4__c , if( Amount_for_Slab_Comparison__c &gt;=Max_Slab5__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab6__c, Max_Slab5__c ,Max_Slab6__c  )))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount for FPSlabAch</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount_for_FPSlabRan__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount_for_Slab_Comparison__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount for FPSlabRan</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_for_Slab_Comparison__c</fullName>
+        <description>This takes the amount of the Disbursement to compare with the Slab</description>
+        <externalId>false</externalId>
+        <label>Amount for Slab Comparison</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apr_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Apr Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apr_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Apr DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Apr_Disb_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=4,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Apr_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=4, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Apr (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Apr_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Apr Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apr_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Apr RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Apr_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=4,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Apr_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=4, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Apr (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Aug_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Aug Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aug_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Aug DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Aug_Disb__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=8,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval(  Commission_based_on__c, &apos;Disbursement&apos;)), Aug_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=8, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aug (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Aug_Disbursement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Aug Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Aug_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Aug RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Aug_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=8,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Aug_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=8, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Aug (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Commission_Cut_Off_Percent__c</fullName>
+        <externalId>false</externalId>
+        <label>Commission Cut Off Percent</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Commission_For_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Commission For Employee</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Commission_Settings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Commission_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Commission Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Regular</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>One Off</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Commission_based_on__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Commission Based on Eg: &apos;Revenue Generated / Disbursement&apos;</inlineHelpText>
+        <label>Commission based on</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Disbursement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Revenue Generated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Commission_for_Bank__c</fullName>
+        <description>To return Bank percentage on to the opportunity we are using this field</description>
+        <externalId>false</externalId>
+        <formula>if(ispickval( Achievement__c ,&apos;Payment on Slab Achievement&apos;),FPSlabAch__c,
+if(ispickval( Achievement__c,&apos;Payment With in the Slab Range&apos;),FPSlabRan__c,0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Commission % for Bank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commission_from1_Bank__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Commission from Bank</label>
+        <referenceTo>Bank_Rates__c</referenceTo>
+        <relationshipLabel>Achievement Settings</relationshipLabel>
+        <relationshipName>Achievement_Settings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Commission_from_Bank__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Commission from Bank</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Achievement Settings</relationshipLabel>
+        <relationshipName>Achievement_Settings</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Commission_paid_on_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Commission paid on basis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>%ge</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Amount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Commission_paid_on__c</fullName>
+        <externalId>false</externalId>
+        <label>Commission paid on</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Flat Pay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cumulative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Incremental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Commission_value_for_Calculation__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval(Achievement__c,&apos;Payment on Slab Achievement&apos;),
+if( Amount_for_Slab_Comparison__c &lt;= max(Max_Slab1__c, Max_Slab2__c),  Slab1_Commission__c,
+if( Amount_for_Slab_Comparison__c &lt;=max( Max_Slab2__c,Max_Slab3__c), 
+Slab2_Commission__c, 
+if( Amount_for_Slab_Comparison__c &lt;=max( Max_Slab3__c, Max_Slab4__c),  
+Slab3_Commission__c ,
+ if( Amount_for_Slab_Comparison__c  &lt;=max(  Max_Slab4__c  ,Max_Slab5__c),  
+Slab4_Commission__c , 
+if( Amount_for_Slab_Comparison__c &lt;=max( Max_Slab5__c ,Max_Slab6__c),  
+Slab5_Commission__c , Slab6_Commission__c))))),
+if(ispickval( Achievement__c, &apos;Payment With in the Slab Range&apos;),
+if((Amount_for_Slab_Comparison__c&gt;=Min_Slab1__c&amp;&amp;Amount_for_Slab_Comparison__c&lt;=Max_Slab1__c),
+Slab1_Commission__c,
+if((Amount_for_Slab_Comparison__c&gt;=Min_Slab2__c&amp;&amp;Amount_for_Slab_Comparison__c&lt;=Max_Slab2__c),
+Slab2_Commission__c,
+if((Amount_for_Slab_Comparison__c&gt;=Min_Slab3__c&amp;&amp;Amount_for_Slab_Comparison__c&lt;=Max_Slab3__c),
+Slab3_Commission__c,
+if((Amount_for_Slab_Comparison__c&gt;=Min_Slab4__c&amp;&amp;Amount_for_Slab_Comparison__c&lt;=Max_Slab4__c),
+Slab4_Commission__c,
+if((Amount_for_Slab_Comparison__c&gt;=Min_Slab5__c&amp;&amp;Amount_for_Slab_Comparison__c&lt;=Max_Slab5__c),
+Slab5_Commission__c,Slab6_Commission__c))))),0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Commission value for Calculation</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>4</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dec_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Dec Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dec_DB_Cum__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=12,ispickval(Commission_paid_on__c,&apos;Cumulative&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), if((Dec_Disbursement__c&gt;Min_Slab1__c) &amp;&amp; (Dec_Disbursement__c&lt;=Max_Slab1__c), Dec_Disbursement__c * (Slab1_Commission__c /100), if((Dec_Disbursement__c&gt;=Min_Slab2__c) &amp;&amp; (Dec_Disbursement__c&lt;=Max_Slab2__c), (Max_Slab1__c * (Slab1_Commission__c /100))+(Dec_Disbursement__c-Max_Slab1__c)*(Slab2_Commission__c/100), if((Dec_Disbursement__c&gt;=Min_Slab3__c) &amp;&amp; (Dec_Disbursement__c&lt;=Max_Slab3__c), (Max_Slab1__c * (Slab1_Commission__c /100))+(Max_Slab2__c * (Slab2_Commission__c /100))+(Dec_Disbursement__c-Max_Slab3__c)*(Slab3_Commission__c/100),if((Dec_Disbursement__c&gt;=Min_Slab4__c) &amp;&amp; (Dec_Disbursement__c&lt;=Max_Slab4__c), (Max_Slab1__c * (Slab1_Commission__c /100))+(Max_Slab2__c * (Slab2_Commission__c /100))+(Max_Slab3__c * (Slab3_Commission__c /100))+(Dec_Disbursement__c-Max_Slab4__c)*(Slab4_Commission__c/100),if((Dec_Disbursement__c&gt;=Min_Slab5__c) &amp;&amp; (Dec_Disbursement__c&lt;=Max_Slab5__c), (Max_Slab1__c * (Slab1_Commission__c /100))+(Max_Slab2__c * (Slab2_Commission__c /100))+(Max_Slab3__c * (Slab3_Commission__c /100))+(Max_Slab4__c * (Slab4_Commission__c /100))+(Dec_Disbursement__c-Max_Slab5__c)*(Slab5_Commission__c/100),if((Dec_Disbursement__c&gt;=Min_Slab6__c) &amp;&amp; (Dec_Disbursement__c&lt;=Max_Slab6__c), (Max_Slab1__c * (Slab1_Commission__c /100))+(Max_Slab2__c * (Slab2_Commission__c /100))+(Max_Slab3__c * (Slab3_Commission__c /100))+(Max_Slab4__c * (Slab4_Commission__c /100))+(Max_Slab5__c * (Slab5_Commission__c /100))+(Dec_Disbursement__c-Max_Slab6__c)*(Slab6_Commission__c/100),1111111)))))),101)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dec DB Cum</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Dec_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Dec DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Dec_Disb_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=12,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval(  Commission_based_on__c, &apos;Disbursement&apos;),ispickval( Achievement__c ,&apos;Payment With in the Slab Range&apos;)), Dec_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=12, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dec (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Dec_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Dec Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dec_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Dec RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Dec_Rev_Disb__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=12,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Dec_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=12, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dec (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Dec__c</fullName>
+        <externalId>false</externalId>
+        <label>Dec</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FPSlabAch__c</fullName>
+        <description>This field checks for the monthly slab the Monthly Disbursement is falling under and Returns that particular Slab commission</description>
+        <externalId>false</externalId>
+        <formula>if(  Amount_for_Slab_Comparison__c  &gt;=Max_Slab1__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab2__c, Slab1_Commission__c, if( Amount_for_Slab_Comparison__c &gt;=Max_Slab2__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab3__c, Slab2_Commission__c,if( Amount_for_Slab_Comparison__c &gt;=Max_Slab3__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab4__c, Slab3_Commission__c, if( Amount_for_Slab_Comparison__c &gt;=Max_Slab4__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab5__c, Slab4_Commission__c, if( Amount_for_Slab_Comparison__c &gt;=Max_Slab5__c &amp;&amp; Amount_for_Slab_Comparison__c &lt; Max_Slab6__c, Slab5_Commission__c,Slab6_Commission__c )))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FPSlabAch</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FPSlabRan__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Amount_for_Slab_Comparison__c &gt;=Min_Slab1__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab1__c, Slab1_Commission__c, if( Amount_for_Slab_Comparison__c &gt;=Min_Slab2__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab2__c, Slab2_Commission__c,if( Amount_for_Slab_Comparison__c &gt;=Min_Slab3__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab3__c, Slab3_Commission__c, if( Amount_for_Slab_Comparison__c &gt;=Min_Slab4__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab4__c, Slab4_Commission__c, if( Amount_for_Slab_Comparison__c &gt;=Min_Slab5__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab5__c, Slab5_Commission__c,if( Amount_for_Slab_Comparison__c &gt;=Min_Slab6__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab6__c, Slab5_Commission__c,0))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>FPSlabRan</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Feb_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Feb Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feb_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Feb DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Feb_Disb_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=2,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Feb_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=2, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Feb (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Feb_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Feb Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Feb_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Feb RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Feb_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=2,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Feb_Achievement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=2, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Feb (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Year1__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Year(n)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Financial_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>Financial Year</label>
+        <picklist>
+            <picklistValues>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IncSlabAch_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_paid_on__c, &apos;Incremental&apos;),
+if(Amount_for_Slab_Comparison__c &gt;=Max_Slab1__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab2__c, Slab1_Commission__c,
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab2__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab3__c,
+Slab1_Commission__c+Slab2_Commission__c,
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab3__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab4__c,
+Slab1_Commission__c+Slab2_Commission__c+ Slab3_Commission__c,
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab4__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab5__c,
+Slab1_Commission__c+Slab2_Commission__c+Slab3_Commission__c+Slab4_Commission__c,
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab5__c &amp;&amp; Amount_for_Slab_Comparison__c &lt; Max_Slab6__c,
+Slab1_Commission__c+Slab2_Commission__c+Slab3_Commission__c+Slab4_Commission__c+Slab5_Commission__c,
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab6__c,
+Slab1_Commission__c+ Slab2_Commission__c+ Slab3_Commission__c+Slab4_Commission__c+Slab5_Commission__c+Slab5_Commission__c+Slab6_Commission__c,0)
+
+)
+)
+)
+)
+)
+,0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IncSlabAch Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IncSlabAch_ge__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_paid_on__c, &apos;Incremental&apos;),
+
+if(Amount_for_Slab_Comparison__c &gt;=Max_Slab1__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab2__c,
+ Max_Slab1__c*(Slab1_Commission__c/100), 
+
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab2__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab3__c, 
+(Max_Slab1__c*(Slab1_Commission__c/100))+((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100)), 
+
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab3__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab4__c, 
+(Max_Slab1__c*(Slab1_Commission__c/100))+((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+ 
+((Max_Slab3__c-Max_Slab2__c)*(Slab3_Commission__c/100)),
+
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab4__c &amp;&amp; Amount_for_Slab_Comparison__c&lt; Max_Slab5__c,
+(Max_Slab1__c*(Slab1_Commission__c/100))+ ((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+ 
+((Max_Slab3__c-Max_Slab2__c)*(Slab3_Commission__c/100))+((Max_Slab4__c-Max_Slab3__c)*(Slab4_Commission__c/100)), 
+
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab5__c &amp;&amp; Amount_for_Slab_Comparison__c &lt; Max_Slab6__c, 
+(Max_Slab1__c*(Slab1_Commission__c/100))+ ((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+ 
+((Max_Slab3__c-Max_Slab2__c)*(Slab3_Commission__c/100))+((Max_Slab4__c-Max_Slab3__c)*(Slab4_Commission__c/100))+
+((Max_Slab5__c-Max_Slab4__c)*(Slab5_Commission__c/100)),
+ 
+if( Amount_for_Slab_Comparison__c &gt;=Max_Slab6__c, 
+(Max_Slab1__c*(Slab1_Commission__c/100))+ ((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+ 
+((Max_Slab3__c-Max_Slab2__c)*(Slab3_Commission__c/100))+((Max_Slab4__c-Max_Slab3__c)*(Slab4_Commission__c/100))+
+((Max_Slab5__c-Max_Slab4__c)*(Slab5_Commission__c/100))+((Max_Slab6__c-Max_Slab5__c)*(Slab6_Commission__c/100)),0)
+
+))))),0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IncSlabAch %ge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IncSlabRan_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval(Commission_paid_on_2__c,&apos;Amount&apos;) &amp;&amp; ispickval(Commission_paid_on__c, &apos;Incremental&apos;),
+
+if(Amount_for_Slab_Comparison__c &gt;=Min_Slab1__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab1__c, Slab1_Commission__c*(Amount_for_FPSlabRan__c/100000),
+
+if( Amount_for_Slab_Comparison__c &gt;=Min_Slab2__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab2__c,
+( (Max_Slab1__c/100000)* Slab1_Commission__c)+((Amount_for_FPSlabRan__c-Max_Slab1__c)/100000)*Slab2_Commission__c,
+
+if( Amount_for_Slab_Comparison__c &gt;=Min_Slab3__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab3__c,
+(Slab1_Commission__c* (Max_Slab1__c/100000))+(((Max_Slab2__c-Max_Slab1__c)/100000)*Slab2_Commission__c)+(((Amount_for_FPSlabRan__c-Max_Slab2__c)/100000)*Slab3_Commission__c),
+
+if( Amount_for_Slab_Comparison__c &gt;=Min_Slab4__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab4__c,
+(Slab1_Commission__c* (Max_Slab1__c/100000))+(((Max_Slab2__c-Max_Slab1__c)/100000)*Slab2_Commission__c)+(((Max_Slab3__c-Max_Slab2__c)/100000)*Slab3_Commission__c)+(((Amount_for_FPSlabRan__c-Max_Slab3__c)/100000)*Slab4_Commission__c),
+
+if(Amount_for_Slab_Comparison__c &gt;=Min_Slab5__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab5__c,
+(Slab1_Commission__c* (Max_Slab1__c/100000))+(((Max_Slab2__c-Max_Slab1__c)/100000)*Slab2_Commission__c)+(((Max_Slab3__c-Max_Slab2__c)/100000)*Slab3_Commission__c)+(((Max_Slab4__c-Max_Slab3__c)/100000)*Slab4_Commission__c)+(((Amount_for_FPSlabRan__c-Max_Slab4__c)/100000)*Slab5_Commission__c),
+
+if(Amount_for_Slab_Comparison__c &gt;=Min_Slab6__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab6__c,
+(Slab1_Commission__c* (Max_Slab1__c/100000))+(((Max_Slab2__c-Max_Slab1__c)/100000)*Slab2_Commission__c)+(((Max_Slab3__c-Max_Slab2__c)/100000)*Slab3_Commission__c)+(((Max_Slab4__c-Max_Slab3__c)/100000)*Slab4_Commission__c)
++(((Max_Slab5__c-Max_Slab4__c)/100000)*Slab5_Commission__c)
++(((Amount_for_FPSlabRan__c-Max_Slab5__c)/100000)*Slab6_Commission__c),0)
+))))),0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IncSlabRan Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IncSlabRan_ge__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval(Commission_paid_on_2__c,&apos;%ge&apos;) &amp;&amp; ispickval(Commission_paid_on__c, &apos;Incremental&apos;),
+
+if(Amount_for_Slab_Comparison__c &gt;=Min_Slab1__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab1__c,
+(Amount_for_Slab_Comparison__c*(Slab1_Commission__c/100)),
+
+if( Amount_for_Slab_Comparison__c &gt;=Min_Slab2__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab2__c,
+(Max_Slab1__c*(Slab1_Commission__c/100))+(Amount_for_Slab_Comparison__c-Max_Slab1__c)*(Slab2_Commission__c/100),
+
+if( Amount_for_Slab_Comparison__c &gt;=Min_Slab3__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab3__c,
+(Max_Slab1__c*(Slab1_Commission__c/100))+((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+(Amount_for_Slab_Comparison__c-Max_Slab2__c)*(Slab3_Commission__c/100),
+
+if( Amount_for_Slab_Comparison__c &gt;=Min_Slab4__c &amp;&amp; Amount_for_Slab_Comparison__c&lt;= Max_Slab4__c,
+(Max_Slab1__c*(Slab1_Commission__c/100))+((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+((Max_Slab3__c-Max_Slab2__c)*(Slab3_Commission__c/100))+(Amount_for_Slab_Comparison__c-Max_Slab3__c)*(Slab4_Commission__c/100),
+
+if(Amount_for_Slab_Comparison__c &gt;=Min_Slab5__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab5__c,
+(Max_Slab1__c*(Slab1_Commission__c/100))+((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+((Max_Slab3__c-Max_Slab2__c)*(Slab3_Commission__c/100))+((Max_Slab4__c-Max_Slab3__c)*(Slab4_Commission__c/100))+(Amount_for_Slab_Comparison__c-Max_Slab4__c)*(Slab5_Commission__c/100),
+
+if(Amount_for_Slab_Comparison__c &gt;=Min_Slab6__c &amp;&amp; Amount_for_Slab_Comparison__c &lt;= Max_Slab6__c,
+(Max_Slab1__c*(Slab1_Commission__c/100))+((Max_Slab2__c-Max_Slab1__c)*(Slab2_Commission__c/100))+((Max_Slab3__c-Max_Slab2__c)*(Slab3_Commission__c/100))+
+((Max_Slab4__c-Max_Slab3__c)*(Slab4_Commission__c/100))+((Max_Slab5__c-Max_Slab4__c)*(Slab5_Commission__c/100))+
+(Amount_for_Slab_Comparison__c-Max_Slab5__c)*(Slab6_Commission__c/100),0)
+))))),0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>IncSlabRan %ge</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Involvement_in_Application_Processing__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Number of Opportunities the user is involved in Application Processing.</inlineHelpText>
+        <label>Involvement in Application Processing</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Involvement_in_Lead_Generation__c</fullName>
+        <externalId>false</externalId>
+        <label>Involvement in Lead Generation</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jan_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Jan Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jan_DB_Cum__c</fullName>
+        <description>if(and(month(today())=1, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 )</description>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=12,ispickval(Commission_paid_on__c,&apos;Cumulative&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), if((Jan_Disbursement__c&gt;Min_Slab1__c) &amp;&amp; (Jan_Disbursement__c&lt;=Max_Slab1__c), Jan_Disbursement__c * (Slab1_Commission__c /100), if((Jan_Disbursement__c&gt;=Min_Slab2__c) &amp;&amp; (Jan_Disbursement__c&lt;=Max_Slab2__c), (Max_Slab1__c * (Slab1_Commission__c /100))+(Jan_Disbursement__c-Max_Slab1__c)*(Slab2_Commission__c/100), if((Jan_Disbursement__c&gt;=Min_Slab3__c) &amp;&amp; (Jan_Disbursement__c&lt;=Max_Slab3__c), (Max_Slab1__c * (Slab1_Commission__c /100))+(Max_Slab1__c * (Slab1_Commission__c /100))+(Jan_Disbursement__c-Max_Slab3__c)*(Slab2_Commission__c/100),0))),1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jan DB Cum</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jan_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Jan DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jan_Disb_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=1,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Jan_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=1, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jan (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jan_Disbursement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Jan Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jan_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Jan RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jan_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=1,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Jan_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=1, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jan (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jul_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Jul Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jul_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Jul DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jul_Disb_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=7,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Jul_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=7, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jul(Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jul_Disbursement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Jul Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jul_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Jul RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jul_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=7,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Jul_Achievement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=7, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jul(Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jun_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Jun Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jun_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Jun DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jun_Disb_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=6,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Jun_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=6, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jun (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jun_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Jun Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Jun_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Jun RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Jun_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=6,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Jun_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=6, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Jun (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Mar_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Mar Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mar_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Mar DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Mar_Disb_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=3,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Mar_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=3, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mar (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Mar_Disbursement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Mar Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mar_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Mar RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Mar_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=3,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Mar_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=3, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mar (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Max_Slab1__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Slab1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Slab2__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Slab2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Slab3__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Slab3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Slab4__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Slab4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Slab5__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Slab5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Max_Slab6__c</fullName>
+        <externalId>false</externalId>
+        <label>Max Slab6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>May_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>May Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>May_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>May DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>May_DIs_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=5,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), May_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=5, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>May (DIs Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>May_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>May Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>May_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>May RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>May_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=5,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  May_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=5, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>May (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Min_Slab1__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Slab1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Slab2__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Slab2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Slab3__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Slab3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Slab4__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Slab4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Slab5__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Slab5</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Min_Slab6__c</fullName>
+        <externalId>false</externalId>
+        <label>Min Slab6</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nov_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Nov Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nov_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Nov DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Nov_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Nov Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nov_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Nov RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Nov_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=11,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Nov_Achievement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=11, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nov(Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Nov_disb__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=11,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval(  Commission_based_on__c, &apos;Disbursement&apos;)), Nov_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=11, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nov(Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Oct_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Oct Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oct_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Oct DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Oct_Disbursement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Oct Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Oct_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Oct RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Oct_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=10,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Oct_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=10, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Oct (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Define Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Half Yearly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Quarterly__c</fullName>
+        <externalId>false</externalId>
+        <label>Period Basis</label>
+        <picklist>
+            <controllingField>Period__c</controllingField>
+            <picklistValues>
+                <fullName>Q1</fullName>
+                <controllingFieldValues>Quarterly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Q2</fullName>
+                <controllingFieldValues>Quarterly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Q3</fullName>
+                <controllingFieldValues>Quarterly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Q4</fullName>
+                <controllingFieldValues>Quarterly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jan</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Feb</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mar</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apr</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>May</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jun</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jul</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Aug</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sep</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oct</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nov</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Dec</fullName>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1st Half</fullName>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2nd Half</fullName>
+                <controllingFieldValues>Half Yearly</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sep_Achievement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Sep Rev Achievement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sep_DB__c</fullName>
+        <externalId>false</externalId>
+        <label>Sep DB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sep_Disb__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=9,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval(  Commission_based_on__c, &apos;Disbursement&apos;)), Sep_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=9, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sep (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sep_Disbursement__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Sep Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sep_RB__c</fullName>
+        <externalId>false</externalId>
+        <label>Sep RB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Sep_Rev_Based__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=8,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)),  Sep_Achievement__c  * (Commission_value_for_Calculation__c /100), if(and(month(today())=8, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Revenue Generated&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sep (Rev Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Slab1_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Slab1 Commission</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Slab2_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Slab2 Commission</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Slab3_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Slab3 Commission</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Slab4_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Slab4 Commission</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Slab5_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Slab5 Commission</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Slab6_Commission__c</fullName>
+        <externalId>false</externalId>
+        <label>Slab6 Commission</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Target_To_be_Achieved__c</fullName>
+        <externalId>false</externalId>
+        <label>Target To be Achieved</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Test__c</fullName>
+        <description>(or(ispickval(field, &apos;&apos;), ispickval(filed, &apos;&apos;)))</description>
+        <externalId>false</externalId>
+        <formula>if(and(ispickval(Period__c, &apos;Quarterly&apos;),  ispickval(Quarterly__c,&apos;Q4&apos;),(month(today())=12),ispickval( Commission_paid_on__c, &apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c , &apos;%ge&apos;), ispickval( Commission_based_on__c , &apos;Disbursement&apos;),  (Dec_Disbursement__c &lt;= Max_Slab1__c )),  (Slab1_Commission__c /100)*Dec_Disbursement__c,  Dec__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Test</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Achievement_Till_Date__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Revenue Generated Till Date</inlineHelpText>
+        <label>Current Month Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>oct_Disb__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(and(month(today())=10,ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;%ge&apos;), ispickval(  Commission_based_on__c, &apos;Disbursement&apos;)), Oct_Disbursement__c * (Commission_value_for_Calculation__c /100), if(and(month(today())=10, ispickval(Commission_paid_on__c,&apos;Flat Pay&apos;), ispickval( Commission_paid_on_2__c, &apos;Amount&apos;), ispickval( Commission_based_on__c, &apos;Disbursement&apos;)), Commission_value_for_Calculation__c,0 ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Oct (Disb Based)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <type>Currency</type>
+    </fields>
+    <label>Achievement  Setting</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Commission Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Achievement Settings</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Achievement_Setting</fullName>
+        <active>true</active>
+        <description>Record Type for Achievement Setting</description>
+        <label>Achievement Setting</label>
+        <picklistValues>
+            <picklist>Achievement__c</picklist>
+            <values>
+                <fullName>Payment With in the Slab Range</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment on Slab Achievement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_Type__c</picklist>
+            <values>
+                <fullName>One Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_based_on__c</picklist>
+            <values>
+                <fullName>Disbursement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revenue Generated</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_paid_on_2__c</picklist>
+            <values>
+                <fullName>%25ge</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Amount</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_paid_on__c</picklist>
+            <values>
+                <fullName>Cumulative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flat Pay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incremental</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Year1__c</picklist>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Year__c</picklist>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Period__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Define Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Half Yearly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quarterly__c</picklist>
+            <values>
+                <fullName>1st Half</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2nd Half</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jul</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jun</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>May</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nov</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sep</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Bank_Commission</fullName>
+        <active>true</active>
+        <description>Record Type for Bank Commission Setting</description>
+        <label>Bank Commission</label>
+        <picklistValues>
+            <picklist>Achievement__c</picklist>
+            <values>
+                <fullName>Payment With in the Slab Range</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment on Slab Achievement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_Type__c</picklist>
+            <values>
+                <fullName>One Off</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Regular</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_based_on__c</picklist>
+            <values>
+                <fullName>Disbursement</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_paid_on_2__c</picklist>
+            <values>
+                <fullName>%25ge</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commission_paid_on__c</picklist>
+            <values>
+                <fullName>Cumulative</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Flat Pay</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Incremental</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Year1__c</picklist>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Financial_Year__c</picklist>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Period__c</picklist>
+            <values>
+                <fullName>Annual</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Define Date</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Half Yearly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Quarterly__c</picklist>
+            <values>
+                <fullName>1st Half</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2nd Half</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apr</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Aug</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dec</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Feb</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jul</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jun</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>May</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nov</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oct</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Q4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sep</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Enter_Amount</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(  Commission_paid_on_2__c  , &quot;Amount&quot;),   Slab1_Commission__c  &lt;0.0000)</errorConditionFormula>
+        <errorMessage>Enter Amount</errorMessage>
+    </validationRules>
+</CustomObject>

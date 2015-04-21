@@ -1,0 +1,2527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Applicant_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicant Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership Firm</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pvt Ltd Company</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Name</label>
+        <picklist>
+            <picklistValues>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Standard chartered Bank</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kotak Mahindra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Edelweiss</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deutsche post</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>India Bulls</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ing Vysa</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Base_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Employment_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Employment Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Salaried professional</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self Employed professional</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self Employed non professional</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home maker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Fixed_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Fixed Period</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Amount_Max__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Amount(Max)</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Amount_Min__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Amount(Min)</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Product</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan against property</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lease rental discounting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan transfer : Home loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan transfer : Loan against property</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan transfer : Lease rental discounting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Car loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Loan against shares</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit card</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Riders__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Riders</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Topup</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Tenure_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Tenure (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pre_Payment_charges__c</fullName>
+        <externalId>false</externalId>
+        <label>Pre Payment charges</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Processing_Fee_Functions__c</fullName>
+        <externalId>false</externalId>
+        <label>Processing Fee Operators</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Which ever is greater</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Which ever id lesser</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Processing_Fees__c</fullName>
+        <externalId>false</externalId>
+        <label>Processing Fees</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Processing_Fees_p__c</fullName>
+        <externalId>false</externalId>
+        <label>Processing Fees%</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Property_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Property_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Property Details</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Builder under construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ready property</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Land purchase</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>self construction on own land</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Land purchase+Self construction on the land</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Extension/Renovation of our own home</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rate_of_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate of Interest</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Residency_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Residency Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Resident Indian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foreign National of Indian origin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shippe</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Rider_loans_loading__c</fullName>
+        <externalId>false</externalId>
+        <label>Rider loans loading %</label>
+        <picklist>
+            <picklistValues>
+                <fullName>.25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>.50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1.25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1.50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1.75</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2.00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2.25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2.50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2.75</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3.00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3.25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3.50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3.75</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4.00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4.25</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4.50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4.75</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5.00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <label>Test Bank Rate</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Bank_Name__c</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Loan_Product__c</columns>
+        <columns>Base_Rate__c</columns>
+        <columns>Rate_of_Interest__c</columns>
+        <columns>Loan_Amount_Min__c</columns>
+        <columns>Loan_Amount_Max__c</columns>
+        <columns>Fixed_Period__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Test Bank Rate Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Test Bank Rates</pluralLabel>
+    <recordTypes>
+        <fullName>Overdraft_Fixed</fullName>
+        <active>true</active>
+        <label>Overdraft Fixed</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pvt Ltd Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bank_Name__c</picklist>
+            <values>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edelweiss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Bulls</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ing Vysa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kotak Mahindra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard chartered Bank</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment_Status__c</picklist>
+            <values>
+                <fullName>Home maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed non professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Product__c</picklist>
+            <values>
+                <fullName>Car loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against shares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Home loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Riders__c</picklist>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Topup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Fee_Functions__c</picklist>
+            <values>
+                <fullName>Which ever id lesser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Which ever is greater</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Details__c</picklist>
+            <values>
+                <fullName>Builder under construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extension%2FRenovation of our own home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase%2BSelf construction on the land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>self construction on own land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foreign National of Indian origin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shippe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rider_loans_loading__c</picklist>
+            <values>
+                <fullName>%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E00</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Overdraft_Floating</fullName>
+        <active>true</active>
+        <label>Overdraft Floating</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pvt Ltd Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bank_Name__c</picklist>
+            <values>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edelweiss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Bulls</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ing Vysa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kotak Mahindra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard chartered Bank</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment_Status__c</picklist>
+            <values>
+                <fullName>Home maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed non professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Product__c</picklist>
+            <values>
+                <fullName>Car loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against shares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Home loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Riders__c</picklist>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Topup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Fee_Functions__c</picklist>
+            <values>
+                <fullName>Which ever id lesser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Which ever is greater</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Details__c</picklist>
+            <values>
+                <fullName>Builder under construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extension%2FRenovation of our own home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase%2BSelf construction on the land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>self construction on own land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foreign National of Indian origin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shippe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rider_loans_loading__c</picklist>
+            <values>
+                <fullName>%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E00</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Overdraft_Semi_Fixed</fullName>
+        <active>true</active>
+        <label>Overdraft Semi-Fixed</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pvt Ltd Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bank_Name__c</picklist>
+            <values>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edelweiss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Bulls</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ing Vysa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kotak Mahindra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard chartered Bank</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment_Status__c</picklist>
+            <values>
+                <fullName>Home maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed non professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Product__c</picklist>
+            <values>
+                <fullName>Car loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against shares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Home loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Riders__c</picklist>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Topup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Fee_Functions__c</picklist>
+            <values>
+                <fullName>Which ever id lesser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Which ever is greater</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Details__c</picklist>
+            <values>
+                <fullName>Builder under construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extension%2FRenovation of our own home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase%2BSelf construction on the land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>self construction on own land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foreign National of Indian origin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shippe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rider_loans_loading__c</picklist>
+            <values>
+                <fullName>%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E00</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_Fixed</fullName>
+        <active>true</active>
+        <label>Standard Fixed</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pvt Ltd Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bank_Name__c</picklist>
+            <values>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edelweiss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Bulls</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ing Vysa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kotak Mahindra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard chartered Bank</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment_Status__c</picklist>
+            <values>
+                <fullName>Home maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed non professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Product__c</picklist>
+            <values>
+                <fullName>Car loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against shares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Home loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Riders__c</picklist>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Topup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Fee_Functions__c</picklist>
+            <values>
+                <fullName>Which ever id lesser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Which ever is greater</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Details__c</picklist>
+            <values>
+                <fullName>Builder under construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extension%2FRenovation of our own home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase%2BSelf construction on the land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>self construction on own land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foreign National of Indian origin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shippe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rider_loans_loading__c</picklist>
+            <values>
+                <fullName>%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E00</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_Floating</fullName>
+        <active>true</active>
+        <label>Standard Floating</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pvt Ltd Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bank_Name__c</picklist>
+            <values>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edelweiss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Bulls</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ing Vysa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kotak Mahindra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard chartered Bank</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment_Status__c</picklist>
+            <values>
+                <fullName>Home maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed non professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Product__c</picklist>
+            <values>
+                <fullName>Car loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against shares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Home loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Riders__c</picklist>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Topup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Fee_Functions__c</picklist>
+            <values>
+                <fullName>Which ever id lesser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Which ever is greater</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Details__c</picklist>
+            <values>
+                <fullName>Builder under construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extension%2FRenovation of our own home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase%2BSelf construction on the land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>self construction on own land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foreign National of Indian origin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shippe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rider_loans_loading__c</picklist>
+            <values>
+                <fullName>%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E00</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Standard_Semi_Fixed</fullName>
+        <active>true</active>
+        <label>Standard Semi-Fixed</label>
+        <picklistValues>
+            <picklist>Applicant_Type__c</picklist>
+            <values>
+                <fullName>Director</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partner</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership Firm</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pvt Ltd Company</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Bank_Name__c</picklist>
+            <values>
+                <fullName>AXIS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CITI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deutsche post</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Edelweiss</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HDFC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HSBC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ICICI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>India Bulls</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ing Vysa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kotak Mahindra</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>LIC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SBI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard chartered Bank</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment_Status__c</picklist>
+            <values>
+                <fullName>Home maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed non professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Product__c</picklist>
+            <values>
+                <fullName>Car loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit card</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan against shares</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Home loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Lease rental discounting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Loan transfer %3A Loan against property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loan_Riders__c</picklist>
+            <values>
+                <fullName>Enhancement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Refinance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Topup</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Processing_Fee_Functions__c</picklist>
+            <values>
+                <fullName>Which ever id lesser</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Which ever is greater</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Category__c</picklist>
+            <values>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Property_Details__c</picklist>
+            <values>
+                <fullName>Builder under construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Extension%2FRenovation of our own home</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Land purchase%2BSelf construction on the land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready property</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>self construction on own land</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foreign National of Indian origin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shippe</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Rider_loans_loading__c</picklist>
+            <values>
+                <fullName>%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E00</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E50</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4%2E75</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5%2E00</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

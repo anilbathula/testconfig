@@ -1,0 +1,3339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <content>Coapplicant</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Address__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the address of co-applicant</inlineHelpText>
+        <label>Address</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Bank_company__c</fullName>
+        <description>Enter the bank name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the name of the Bank&quot;Eg:Axis Bank&quot;.</inlineHelpText>
+        <label>Banker company</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Banking_With__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Banking With</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Co Applicants</relationshipLabel>
+        <relationshipName>Co_Applicants</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Banking_individual__c</fullName>
+        <externalId>false</externalId>
+        <label>Banker Individual</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>City_of_work__c</fullName>
+        <externalId>false</externalId>
+        <label>City of  work</label>
+        <picklist>
+            <controllingField>Residency_Status__c</controllingField>
+            <picklistValues>
+                <fullName>Bangalore</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hyderabad</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kolkata</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delhi&amp;NCR</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chennai</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ahmedabad</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pune</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Jaipur</fullName>
+                <controllingFieldValues>Resident Indian</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Australia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Belgium</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Canada</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Denmark</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>France</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Germany</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HongKong</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Indonesia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Italy</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Japan</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Kuwait</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Malaysia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Netherlands</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Zealand</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Oman</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Qatar</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Russia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saudi Arabia</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Singapore</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spain</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Switzerland</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UAE</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UK</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>USA</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <controllingFieldValues>Foriegn Nation of Indian Orgin</controllingFieldValues>
+                <controllingFieldValues>NRI</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Co_Applicant_For__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Co Applicant (Contact)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Co Applicants (Co Applicant For)</relationshipLabel>
+        <relationshipName>Co_Applicants</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Co_applicant_name_Exisiting_Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Co applicant name(Exisiting Lead)</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Co Applicants (Co applicant name(Exisiting Lead))</relationshipLabel>
+        <relationshipName>Co_Applicants1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Co_applicant_name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Co applicant name(Exisiting contact)</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Co Applicants (Co applicant name(Exisiting contact))</relationshipLabel>
+        <relationshipName>Co_Applicants1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Coapplicant_From__c</fullName>
+        <externalId>false</externalId>
+        <label>Coapplicant From</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Co Applicants (Company)</relationshipLabel>
+        <relationshipName>Co_Applicants1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Company_type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Company</label>
+        <picklist>
+            <controllingField>Employment__c</controllingField>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietorship</fullName>
+                <controllingFieldValues>Self Employed Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership</fullName>
+                <controllingFieldValues>Self Employed Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Private Ltd</fullName>
+                <controllingFieldValues>Self Employed Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietorship.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Private Ltd.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Public Ltd.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MNC.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Govt.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others.</fullName>
+                <controllingFieldValues>Salaried</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Proprietorship,</fullName>
+                <controllingFieldValues>Self Employed Non Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Partnership,</fullName>
+                <controllingFieldValues>Self Employed Non Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Private Ltd,</fullName>
+                <controllingFieldValues>Self Employed Non Professional</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_co_y1__c</fullName>
+        <externalId>false</externalId>
+        <label>Depriciation co y1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_co_y2__c</fullName>
+        <externalId>false</externalId>
+        <label>Depriciation  co y2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_co_y3__c</fullName>
+        <externalId>false</externalId>
+        <label>Depriciation co y3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_y1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter current year depreciation</inlineHelpText>
+        <label>Depriciation y1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_y2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter previous year depreciation</inlineHelpText>
+        <label>Depriciation y2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Depriciation_y3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter depreciation for year before last</inlineHelpText>
+        <label>Depriciation y3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Email &quot;Eg:name@gmail.com&quot;</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employment__c</fullName>
+        <description>Choose type for  employment</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the Type of Employment like&quot;Salaried,Salaried Professional,Self Employed Business&quot; etc.</inlineHelpText>
+        <label>Type Of Employment</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self Employed Professional</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Self Employed Non Professional</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Home Maker</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Profit_Yr_1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the gross receipts/Turn over of the current year</inlineHelpText>
+        <label>Gross Profit Yr 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Profit_Yr_2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the gross receipts/Turn over for the previous year</inlineHelpText>
+        <label>Gross Profit Yr 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Profit_Yr_3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the gross receipts/Turn over for the year before last</inlineHelpText>
+        <label>Gross Profit Yr 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Gross_Profit_co_y1__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Profit  co y1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Applicant Name (lead)</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Co Applicants</relationshipLabel>
+        <relationshipName>Co_Applicants</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Line_of_Business_PNS__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose The type of Profession He/She Working&quot;Eg:Accountant,Consultant&quot;.</inlineHelpText>
+        <label>Industry Type(Pns)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food&amp;Beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Requested_SAL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the amount for the loan requested Eg: Rs 400000.</inlineHelpText>
+        <label>Loan Requested(SAL)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Tenure_Requested__c</fullName>
+        <description>Enter the reason for loan tenure request</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter period for loan tenure requested&quot;Eg:6 Months&quot;.</inlineHelpText>
+        <label>Loan Tenure Requested</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Loan__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>loans__c</referenceTo>
+        <relationshipLabel>Co Applicants</relationshipLabel>
+        <relationshipName>Co_Applicants</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Co Applicants</relationshipLabel>
+        <relationshipName>Co_Applicants</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Loan2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Other Loan2</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_Loan3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Other Loan3</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_Loan4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Other Loan4</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_co_loan1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If having other loans Click Checked else Unchecked</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose whether he/she is having any other loans&quot;Eg:Yes/No&quot;.</inlineHelpText>
+        <label>Other co loan1</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_co_loan2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Other co loan2</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_co_loan3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>The Loan take are not for Private</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose whether he had taken any Self Loan&quot;Eg:Yes/No&quot;</inlineHelpText>
+        <label>Other co loan3</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_co_loan4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose the value for Co-applicaont&quot;Eg:Yes/No&quot;.</inlineHelpText>
+        <label>Other co loan4</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Other_income__c</fullName>
+        <externalId>false</externalId>
+        <label>Other income</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Other_loan1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Enter if he has any other loans</description>
+        <externalId>false</externalId>
+        <label>Other Loan1</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Phone_no__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the phone number</inlineHelpText>
+        <label>Phone no</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Prop_location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Prop location</label>
+        <referenceTo>Locations__c</referenceTo>
+        <relationshipLabel>Co Applicants</relationshipLabel>
+        <relationshipName>Co_Applicants</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Relation_ship__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Relationship with Applicant</inlineHelpText>
+        <label>Relation ship</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Self</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Parents</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spouse</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Children</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Residency_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Residency Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>NRI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Foriegn Nation of Indian Orgin</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Salary_gross__c</fullName>
+        <externalId>false</externalId>
+        <label>salary gross</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Will_Join_Loan__c</fullName>
+        <externalId>false</externalId>
+        <label>Will Co-apply</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>dob__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of Birth</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>gross_profit_co_y2__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Profit co y2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>gross_profit_co_y3__c</fullName>
+        <externalId>false</externalId>
+        <label>Gross Profit  co y3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>itr_co_y1__c</fullName>
+        <externalId>false</externalId>
+        <label>itr co y1</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>itr_co_y2__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter net profit of the previous year</inlineHelpText>
+        <label>itr co y2</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>itr_co_y3__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter net profit of year before last</inlineHelpText>
+        <label>itr co y3</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>itr_y1__c</fullName>
+        <description>Enter the amount for IT Returns</description>
+        <externalId>false</externalId>
+        <label>itr y1</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>itr_y2__c</fullName>
+        <description>Enter the second year IT return filed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter  the Personal IT Return Filed for  2nd  year &quot;Eg:Rs 5000&quot;.</inlineHelpText>
+        <label>itr y2</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>itr_y3__c</fullName>
+        <description>Enter the Third Year IT return</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter  the Personal IT Return Filed for  3rd  year &quot;Eg:Rs 6000&quot;.</inlineHelpText>
+        <label>itr y3</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_emi1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter loan EMI for current Loan</inlineHelpText>
+        <label>other loan co emi1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_emi2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co emi2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_emi3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co emi3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_emi4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co emi4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_os_term1__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co os term1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_os_term2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co os term2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_os_term3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co os term3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_os_term4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co os term4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_type1__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co type1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgage Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_type2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co type2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_type3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co type3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_co_type4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan co type4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_term1__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan due term1</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_term2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan due term2</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_term3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan due term3</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_term4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan due term4</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_termco1__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the balance tenure of loan</inlineHelpText>
+        <label>other loan due termco1</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_termco2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan due termco2</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_termco3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan due termco3</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_due_termco4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan due termco4</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>other_loan_emi1__c</fullName>
+        <description>Enter the EMI Amount</description>
+        <externalId>false</externalId>
+        <label>other loan emi1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_emi2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan emi2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_emi3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan emi3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_emi4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan emi4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_os1__c</fullName>
+        <description>Enter the Period of time for Unexpired tenure</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Less than 11 months cant be treated as Loan</inlineHelpText>
+        <label>other loan os1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_os2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan os2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_os3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan os3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_os4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan os4</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_type1__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan type1</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_type2__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan type2</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_type3__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan type3</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>other_loan_type4__c</fullName>
+        <externalId>false</externalId>
+        <label>other loan type4</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(TERM)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Loan(OD)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>stake__c</fullName>
+        <description>Enter the percentage for stake</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the percentage for Stake&quot;Eg:10%,20%&quot;.</inlineHelpText>
+        <label>Stake %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>stake_holders__c</fullName>
+        <externalId>false</externalId>
+        <label>stake holders</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>type_of_industry__c</fullName>
+        <externalId>false</externalId>
+        <label>type of industry</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food&amp;beverage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non Profit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>type_of_profession__c</fullName>
+        <externalId>false</externalId>
+        <label>type of profession</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Architect</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company Secretary</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cost Accountant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chartered Accountant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Engineer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>M.B.A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <label>Co Applicant</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Co Applicant</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Co Applicants</pluralLabel>
+    <recordTypes>
+        <fullName>Co_Applicant_on_Lead</fullName>
+        <active>false</active>
+        <label>Co Applicant on Lead</label>
+        <picklistValues>
+            <picklist>City_of_work__c</picklist>
+            <values>
+                <fullName>Ahmedabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bangalore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chennai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delhi%26NCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denmark</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HongKong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indonesia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jaipur</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kolkata</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kuwait</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Malaysia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pune</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qatar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saudi Arabia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switzerland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Coapplicant_From__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Company_type__c</picklist>
+            <values>
+                <fullName>Govt%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MNC%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Ltd</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Ltd%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietorship%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietorship%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment__c</picklist>
+            <values>
+                <fullName>Home Maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed Non Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Line_of_Business_PNS__c</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food%26Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Other_income__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relation_ship__c</picklist>
+            <values>
+                <fullName>Children</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parents</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spouse</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foriegn Nation of Indian Orgin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Will_Join_Loan__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type1__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type2__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type3__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type4__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type1__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type2__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type3__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type4__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>stake_holders__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>type_of_industry__c</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food%26beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>type_of_profession__c</picklist>
+            <values>
+                <fullName>Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chartered Accountant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company Secretary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost Accountant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>M%2EB%2EA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Co_Applicant_on_Opportunity</fullName>
+        <active>false</active>
+        <label>Co Applicant on Opportunity</label>
+        <picklistValues>
+            <picklist>City_of_work__c</picklist>
+            <values>
+                <fullName>Ahmedabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Australia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bangalore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Belgium</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Canada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chennai</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delhi%26NCR</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denmark</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>France</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Germany</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>HongKong</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Indonesia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jaipur</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Japan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kolkata</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kuwait</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Malaysia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Netherlands</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Zealand</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Oman</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pune</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Qatar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Russia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Saudi Arabia</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Switzerland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UK</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>USA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Coapplicant_From__c</picklist>
+            <values>
+                <fullName>Contact</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Company_type__c</picklist>
+            <values>
+                <fullName>Govt%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MNC%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partnership%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Ltd</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Ltd%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Private Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietorship</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietorship%2C</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Proprietorship%2E</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Ltd%2E</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Employment__c</picklist>
+            <values>
+                <fullName>Home Maker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retired</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Salaried</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed Non Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self Employed Professional</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Student</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Line_of_Business_PNS__c</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food%26Beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non-Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Other_income__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Relation_ship__c</picklist>
+            <values>
+                <fullName>Children</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Parents</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Self</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spouse</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Residency_Status__c</picklist>
+            <values>
+                <fullName>Foriegn Nation of Indian Orgin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NRI</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resident Indian</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Will_Join_Loan__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type1__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgage Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type2__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type3__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_co_type4__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type1__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type2__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type3__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>other_loan_type4__c</picklist>
+            <values>
+                <fullName>Business Loan%28OD%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Business Loan%28TERM%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commercial Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mortgaged Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Personal Loan</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vehicle Loan</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>stake_holders__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>type_of_industry__c</picklist>
+            <values>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Construction</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consulting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Education</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Environmental</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food%26beverage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health Care</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Hospitality</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Media</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Non Profit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shipping</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telecommunication</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>type_of_profession__c</picklist>
+            <values>
+                <fullName>Architect</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chartered Accountant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Company Secretary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cost Accountant</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Doctor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Engineer</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>M%2EB%2EA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Others</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

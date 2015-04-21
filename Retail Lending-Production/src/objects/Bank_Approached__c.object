@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>ASSIGNED_TO__c</fullName>
+        <description>ENTER THE NAME OF THE PERSON YOU ARE ASSIGNING THIS DATA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ENTER THE NAME OF THE PERSON YOU ARE ASSIGNING THIS DATA</inlineHelpText>
+        <label>ASSIGNED TO</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ANSARI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BABU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MADHUMITA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RITU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAIKAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SUKANYA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SWEETY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joyashree</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nidhi</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rohit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shanti</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Applied__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Amount Applied is the Loan Amount from the lead page.&quot;Enter the Amount&quot;.</inlineHelpText>
+        <label>Amount Applied</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Disbursable__c</fullName>
+        <externalId>false</externalId>
+        <formula>MIN( Amount_Sanctioned__c ,  Amount_of_CMV__c  , Total_Property_cost__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount Disbursable=Lesser of Amount of CMV, Amount of COP and Amount Sanctioned</inlineHelpText>
+        <label>Amount Disbursable</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Sanctioned__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount of loan Can be sanctioned to the customer</inlineHelpText>
+        <label>Amount Sanctioned</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_of_CMV__c</fullName>
+        <externalId>false</externalId>
+        <formula>Current_Market_Value__c * CMV__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Current Market Value *Permissible LTV on CMV=Amount of CMV</inlineHelpText>
+        <label>Amount of CMV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_to_start_Disbursement__c</fullName>
+        <description>MAX()</description>
+        <externalId>false</externalId>
+        <formula>if(ispickval( MMR_Choosen__c , &apos;Parallel Funding&apos;), Property_Cost__c * Required_for_disbursement__c,  MMR__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount to Start Disbursement= IF parallel funding=(Property Cost * % Required to start Disbursement )
+ELSE = MMR.</inlineHelpText>
+        <label>Amount to start Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Sourcing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sent to Bank</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Logged</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Queries&amp;Discrepancies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Query Solved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Credit Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Legal Doc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal Queries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal Clearance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Valuation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Doc-Kit Signing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Agreed to Disburse</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Awaiting Disbursal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Disbursed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected by bank</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected by Borrower</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Contact_Email_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Contact Email ID</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bank Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Banks Approached (Bank Contact)</relationshipLabel>
+        <relationshipName>Banks_Approached1</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Name_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>Bank_Name__r.Name</formula>
+        <label>Bank Name(2)</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Name__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bank Name</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Banks Approached</relationshipLabel>
+        <relationshipName>Banks_Approached</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Name_formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Bank_Name__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bank Name formula</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Borrower_email__c</fullName>
+        <description>This is to populate the borrower email field on bank approached when a bank approached is created</description>
+        <externalId>false</externalId>
+        <label>Borrower email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CMV__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the percentage of LTV for CMV it should not be more than 80%</inlineHelpText>
+        <label>Permissible LTV(CMV)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>CREATED_BY__c</fullName>
+        <description>ENTER THE NAME OF THE PERSON CREATING THIS DATA</description>
+        <externalId>false</externalId>
+        <label>CREATED BY</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ANSARI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BABU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MADHUMITA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RITU</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SAIKAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SUKANYA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SWEETY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Joyashree</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nidhi</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rohit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Shanti</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Current_Market_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the amount for current market value of the property.</inlineHelpText>
+        <label>Current Market Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disbursement_Pattern__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Disbursement Pattern like&quot;10:80:10 or 20:80&quot;</inlineHelpText>
+        <label>Disbursement Pattern</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Final_LTV__c</fullName>
+        <externalId>false</externalId>
+        <formula>Amount_Disbursable__c / Property_Cost__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount Disbursable / Property Cost = LTV</inlineHelpText>
+        <label>Final LTV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Loan_Sanctioned__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan Sanctioned</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Loan__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>loans__c</referenceTo>
+        <relationshipLabel>Banks Approached</relationshipLabel>
+        <relationshipName>Banks_Approached</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Loan_to_value_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan to value(Agreement)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Loan_to_value_Market__c</fullName>
+        <externalId>false</externalId>
+        <label>Loan to value(Market)</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MMR_Choosen__c</fullName>
+        <externalId>false</externalId>
+        <label>MMR Choosen</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Parallel Funding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>100%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MMR__c</fullName>
+        <externalId>false</externalId>
+        <formula>Property_Cost__c - Amount_Disbursable__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The value of Cost of Property-Amount Disbursable= MMR</inlineHelpText>
+        <label>MMR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Banks Approached</relationshipLabel>
+        <relationshipName>Banks_Approached</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Percentage_Approved__c</fullName>
+        <externalId>false</externalId>
+        <label>Percentage Approved</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Permissible_LTV_COP__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the percentage of LTV for COP it should not be more than 80%</inlineHelpText>
+        <label>Permissible LTV(COP)</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Property_Cost__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Cost of the Property &quot;Eg:5000000&quot;</inlineHelpText>
+        <label>Property Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Required_for_disbursement__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Amount of Percentage to start Disbursement &quot;Eg:10%,15%or 20%&quot;</inlineHelpText>
+        <label>% Required for disbursement</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Status_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( Approval_Status__c , &apos;Sent to Bank&apos;, 1, &apos;Logged&apos;, 2, &apos;Queries&amp;Discrepancies&apos;, 3, &apos;Query Solved&apos;, 4, &apos;Awaiting Approval&apos;, 5, &apos;Credit Approved&apos;, 6, &apos;Awaiting Legal Doc&apos;, 7, &apos;Legal Queries&apos;, 8, &apos;Legal Clearance&apos;, 9, &apos;Valuation&apos;, 10, &apos;Doc-Kit Signing&apos;, 11, &apos;Agreed to Disburse&apos;, 12, &apos;Awaiting Disbursal&apos;, 13, &apos;Disbursed&apos;, 14, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Property_cost__c</fullName>
+        <externalId>false</externalId>
+        <formula>Property_Cost__c * Permissible_LTV_COP__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Property Cost*Permissible LTV on COP=Amount of COP</inlineHelpText>
+        <label>Amount of COP</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <label>Bank Approached</label>
+    <nameField>
+        <displayFormat>{0000}</displayFormat>
+        <label>Banks Approached</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Banks Approached</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Cant_change_any_field</fullName>
+        <active>true</active>
+        <description>This is to restrict user after the stage becomes disbursed.</description>
+        <errorConditionFormula>AND(ISPICKVAL( Approval_Status__c ,&apos;Disbursed&apos;),OR(ISCHANGED( Amount_Disbursable__c ),ISCHANGED( Amount_Applied__c ),ISCHANGED( Amount_Sanctioned__c) ,ISCHANGED( MMR_Choosen__c ),ISCHANGED( Current_Market_Value__c ),ISCHANGED( CMV__c ),ISCHANGED( Property_Cost__c ),ISCHANGED( Permissible_LTV_COP__c )))</errorConditionFormula>
+        <errorMessage>You cant change the values already the disbursement was made by the bank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_cant_be_Backward</fullName>
+        <active>true</active>
+        <description>To restrict user from changing the stage to backwards</description>
+        <errorConditionFormula>CASE(Approval_Status__c , 
+&quot;Sent to Bank&quot;,1, 
+&quot;Logged&quot;,2, 
+&quot;Queries&amp;Discrepancies&quot;,3, 
+&quot;Query Solved&quot;,4, 
+&quot;Awaiting Approval&quot;,5, 
+&quot;Credit Approved&quot;,6, 
+&quot;Awaiting Legal Doc&quot;,7, 
+&quot;Legal Queries&quot;,8, 
+&quot;Legal Clearance&quot;,9, 
+&quot;Valuation&quot;,10, 
+&quot;Doc-Kit Signing&quot;,11, 
+&quot;Agreed to Disburse&quot;,12, 
+&quot;Awaiting Disbursal&quot;,13, 
+&quot;Disbursed&quot;,14, 
+&quot;Rejected by bank&quot;,15, 
+&quot;Rejected by Borrower&quot;,16,0) 
+&lt; 
+CASE(PRIORVALUE(Approval_Status__c) , 
+&quot;Sent to Bank&quot;,1, 
+&quot;Logged&quot;,2, 
+&quot;Queries&amp;Discrepancies&quot;,3, 
+&quot;Query Solved&quot;,4, 
+&quot;Awaiting Approval&quot;,5, 
+&quot;Credit Approved&quot;,6, 
+&quot;Awaiting Legal Doc&quot;,7, 
+&quot;Legal Queries&quot;,8, 
+&quot;Legal Clearance&quot;,9, 
+&quot;Valuation&quot;,10, 
+&quot;Doc-Kit Signing&quot;,11, 
+&quot;Agreed to Disburse&quot;,12, 
+&quot;Awaiting Disbursal&quot;,13, 
+&quot;Disbursed&quot;,14, 
+&quot;Rejected by bank&quot;,15, 
+&quot;Rejected by Borrower&quot;,16,0)</errorConditionFormula>
+        <errorMessage>You Cant change Approval status to previous value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_cant_change</fullName>
+        <active>true</active>
+        <description>This is to restrict user when changing approval status when disbursement was made from bank.</description>
+        <errorConditionFormula>ischanged( Approval_Status__c )&amp;&amp; Ispickval(priorvalue(Approval_Status__c ),&apos;Disbursed&apos;)</errorConditionFormula>
+        <errorMessage>You can&apos;t change the stage name after disbursement was made by Bank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>opportunity_should_be_same</fullName>
+        <active>false</active>
+        <description>This is to check the loan opportunity and bank approached opportunity are same</description>
+        <errorConditionFormula>Loan__c!=null &amp;&amp; Loan__r.Opportunity__c != Opportunity__c</errorConditionFormula>
+        <errorMessage>Please make sure that opportunity  value should be similar to loan record opportunity value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>required_for_disbursement</fullName>
+        <active>true</active>
+        <description>This to restrict user entering Req to start disbursement when it is not parallel Funding</description>
+        <errorConditionFormula>AND(Required_for_disbursement__c!=0 ||Required_for_disbursement__c!=Null ,ispickVal( MMR_Choosen__c,&apos;100%&apos;))</errorConditionFormula>
+        <errorDisplayField>Required_for_disbursement__c</errorDisplayField>
+        <errorMessage>You can enter this value.only when the MMR chosen is parallel funding</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>required_for_disbursement_2</fullName>
+        <active>true</active>
+        <description>This to restrict user entering Req to start disbursement when it is not parallel Funding</description>
+        <errorConditionFormula>AND( ISNULL(Required_for_disbursement__c),ispickVal( MMR_Choosen__c,&apos;Parallel Funding&apos;))</errorConditionFormula>
+        <errorDisplayField>Required_for_disbursement__c</errorDisplayField>
+        <errorMessage>Please enter this value</errorMessage>
+    </validationRules>
+</CustomObject>

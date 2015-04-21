@@ -1,0 +1,783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Amount_Req_from_Customer__c</fullName>
+        <externalId>false</externalId>
+        <formula>Requested_Amount__c * MMR_Ratio__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount Required from Customer= Builder Demand * MMR ratio of individual</inlineHelpText>
+        <label>Amount Req from Customer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_from_Bank__c</fullName>
+        <externalId>false</externalId>
+        <formula>Requested_Amount__c * MMR_Ratio_Bank__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount Required from Bank= Builder demand*MMR Ratio of Bank</inlineHelpText>
+        <label>Amount Req from Bank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_paid_by_Bank__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The Amount to be Paid by Bank for Parallel Funding</inlineHelpText>
+        <label>Amount  paid by Bank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Amount_paid_by_Customer__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The Amount to be paid by the Customer for Parallel Funding</inlineHelpText>
+        <label>Amount paid by customer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Contact Name</label>
+        <length>200</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bank_Contribution__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Contribution</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Disbursement__c</fullName>
+        <description>changed the formula   in place of these field  Demand_Old_dues__c Replaced with  demand_dues__c.</description>
+        <externalId>false</externalId>
+        <formula>(Requested_Amount__c +Demand_Old_dues__c )-( Test_For_Amt_to_be_paid_by_Cust__c +  Amount_paid_by_Customer__c )-( Amount_paid_by_Bank__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Amount to be paid by bank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bank_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Bank Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Builder_Contact_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Builder Contact Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Builder_Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Builder Contact Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buyer_Email_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Buyer Email</label>
+        <required>false</required>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Buyer_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Buyer Name</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cheque_DD_Details__c</fullName>
+        <description>Enter the details of cheque/DD Details</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the details of cheque/DD  Details</inlineHelpText>
+        <label>Cheque/DD Details (Individual)</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cheque_DD_Details_bank__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the cheque Details of the Bank</inlineHelpText>
+        <label>Cheque/DD Details (Bank)</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Completed_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval (Construction_Stage__c ,&apos;Completed&apos;),today(),null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Completed Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Construction_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Construction Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Cumulative_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Cumulative Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Month_Disbursement__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Month Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Demand_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Demand Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Demand_Old_dues__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Opportunity__r.Builder_Demand_till_date__c - Requested_Amount__c )-( Opportunity__r.Individual_Contribution_Till_Date__c - Amount_paid_by_Customer__c  )-(  Opportunity__r.Disbursement_By_Bank_Till_Date__c -Amount_paid_by_Bank__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>(Opportunity__r.Builder_Demand_till_date__c - Requested_Amount__c )-( Opportunity__r.Individual_Contribution_Till_Date__c - (IF( Active__c, Amount_paid_by_Customer__c , 0 )) )-(  Opportunity__r.Disbursement_By_Bank_Till_Date__c -Amount_paid_by_Bank__c )</inlineHelpText>
+        <label>Demand Old dues</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Demand_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Demand Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>By Date</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>By Stage</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Both</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Disb_by_Customer_till_date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Individual_Contribution_Till_Date__c</formula>
+        <label>Disb by Customer till date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Disbursement_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Disbursement Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disbursement__c</fullName>
+        <description>Enter the schedule for disbursement</description>
+        <externalId>false</externalId>
+        <label>Disbursement Schedule</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Disbursement_by_bank__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Disbursement_By_Bank_Till_Date__c</formula>
+        <label>Disbursement by bank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date__c</fullName>
+        <description>Enter the due date</description>
+        <externalId>false</externalId>
+        <label>Due Date of Individual</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Due_Date_bank__c</fullName>
+        <externalId>false</externalId>
+        <label>Due Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Extra_MMR__c</fullName>
+        <externalId>false</externalId>
+        <label>Extra MMR</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>In_Progress_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval(Construction_Stage__c, &apos;In Progress&apos;), today(), today()+10)</formula>
+        <label>In Progress Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Loan__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Loan</label>
+        <referenceTo>loans__c</referenceTo>
+        <relationshipLabel>Disbursement Trackers</relationshipLabel>
+        <relationshipName>Disbursement_Trackers</relationshipName>
+        <required>true</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MMR_Ratio_Bank__c</fullName>
+        <externalId>false</externalId>
+        <formula>1-MMR_Ratio__c</formula>
+        <label>MMR Ratio Bank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>MMR_Ratio__c</fullName>
+        <externalId>false</externalId>
+        <label>MMR Ratio</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Not_Completed__c</fullName>
+        <externalId>false</externalId>
+        <formula>if(ispickval (Construction_Stage__c ,&apos;Not Completed&apos;),today()+10,null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Not Completed</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Disbursements</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Paid_Date__c</fullName>
+        <description>Enter the paid date</description>
+        <externalId>false</externalId>
+        <label>Paid Date (Individual)</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Paid_Date_bank__c</fullName>
+        <externalId>false</externalId>
+        <label>Paid Date (Bank)</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PaymentStatus__c</fullName>
+        <description>choose the mode of paid</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The payment status of the customer &quot;Eg:Paid/Unpaid&quot;</inlineHelpText>
+        <label>Payment Status (Customer)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unpaid</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Made_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment By Customer</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bank</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Mode_bank__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Mode of Bank</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cheque</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Schedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Schedule</label>
+        <picklist>
+            <picklistValues>
+                <fullName>On Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On start of Foundation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Cellar Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Ground Floor Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 1st Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 2nd Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 3rd Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 4th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 5th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 6th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 7th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 8th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 9th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 10th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 11th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 12th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 13th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 14th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 15th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 16th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 17th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 18th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 19th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 20th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 21st Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 22nd Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 23rd Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 24th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On casting of 25th Slab</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Completion of Masonry</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Completion of Plastering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Completion of Flooring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Completion/ Registration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Status (Bank)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Unpaid</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Paid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment By Bank</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bank</fullName>
+                <default>true</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Payment_mode__c</fullName>
+        <description>Select the mode of payment.</description>
+        <externalId>false</externalId>
+        <label>Payment Mode of Individual</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Cheque</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cash</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DD</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Requested_Amount__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the Demanded Amount from the Builder for Disbursement.By default the value in this field will be zero.if you remove it you should put some value or put zero to save record</inlineHelpText>
+        <label>Builder Demand</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Test_For_Amt_to_be_paid_by_Cust__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Opportunity__r.MMR_Chosen_f__c =&apos;Parallel Funding&apos;, 
+
+if(Opportunity__r.Builder_Demand_till_date__c &lt;=(Opportunity__r.Req_to_start_Disbursement_f__c * Loan__r.Property_Cost__c), 
+(Opportunity__r.Builder_Demand_till_date__c-Opportunity__r.Individual_Contribution_Till_Date__c), 
+if((Opportunity__r.MMR_Customer_Ratio__c * Opportunity__r.Builder_Demand_till_date__c)&gt;= 
+(Opportunity__r.Req_to_start_Disbursement_f__c * Loan__r.Property_Cost__c ), 
+
+if((Opportunity__r.MMR_Customer_Ratio__c * Opportunity__r.Builder_Demand_till_date__c)-Opportunity__r.Individual_Contribution_Till_Date__c&lt;0,0, 
+(Opportunity__r.MMR_Customer_Ratio__c * Opportunity__r.Builder_Demand_till_date__c)-Opportunity__r.Individual_Contribution_Till_Date__c), 
+
+if((Opportunity__r.Req_to_start_Disbursement_f__c * Loan__r.Property_Cost__c) -Opportunity__r.Individual_Contribution_Till_Date__c&lt;0,0,(Opportunity__r.Req_to_start_Disbursement_f__c * Loan__r.Property_Cost__c) -Opportunity__r.Individual_Contribution_Till_Date__c))), 
+
+
+if( Opportunity__r.Individual_Contribution_Till_Date__c &gt;= Opportunity__r.MMR_Required__c, 0, 
+if(Opportunity__r.Individual_Contribution_Till_Date__c &gt;= Opportunity__r.Builder_Demand_till_date__c,0, 
+MIN(Opportunity__r.Builder_Demand_till_date__c- 
+Opportunity__r.Individual_Contribution_Till_Date__c,Opportunity__r.MMR_Required__c-Opportunity__r.Individual_Contribution_Till_Date__c))))</formula>
+        <label>Amount to be paid by customer</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Amount1__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Disbursement__c</fullName>
+        <description>These calculation for all records which are there for the particular opportunity</description>
+        <externalId>false</externalId>
+        <formula>Amount_paid_by_Bank__c + Amount_paid_by_Customer__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Amount Paid by Bank  + Amount Paid by Customer =Total Disbursement</inlineHelpText>
+        <label>Total Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Disbursment__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Total_Disbursment_till_Date__c</formula>
+        <inlineHelpText>Total Disbursement Till Date adding all the Disbursements which are paid uptill now</inlineHelpText>
+        <label>Total Disbursement</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>demand_dues__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Requested_Amount__c=( Amount_paid_by_Bank__c + Amount_paid_by_Customer__c),0,Opportunity__r.Demand_old_dues__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>demand dues</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Currency</type>
+    </fields>
+    <label>Disbursement Tracker</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{000}</displayFormat>
+        <label>Disbursement</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Disbursement Trackers</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Bank_Status_paid</fullName>
+        <active>true</active>
+        <description>To restrict user from making bank payment status paid until the below condition is met</description>
+        <errorConditionFormula>ISPICKVAL(Payment_Status__c,&apos;Paid&apos;)&amp;&amp; ( Disb_by_Customer_till_date__c &lt;Opportunity__r.Amount_to_start_Disbursement_f__c )</errorConditionFormula>
+        <errorMessage>You cant make bank payment until amount to start disbursement is completed by the customer.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Amnt_Entered_and_Status_Bank</fullName>
+        <active>false</active>
+        <description>This validates the amount paid by Bank whne the status is paid</description>
+        <errorConditionFormula>OR((ispickval(  PaymentStatus__c , &apos;Unpaid&apos;) &amp;&amp; Amount_paid_by_Bank__c  &gt; 0), NOT(ispickval(Loan__r.Approval_Status__c,&apos;Disbursed&apos; )))</errorConditionFormula>
+        <errorDisplayField>Payment_Status__c</errorDisplayField>
+        <errorMessage>Please make the Status as Paid and the Loan Approval Status is Disbursed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Amnt_Entered_and_Status_Cust</fullName>
+        <active>false</active>
+        <description>This validates the amount paid by Customer when the status is Unpaid</description>
+        <errorConditionFormula>OR((ispickval(  PaymentStatus__c , &apos;Unpaid&apos;) &amp;&amp;  Amount_paid_by_Customer__c  &gt; 0), NOT(ispickval(Loan__r.Approval_Status__c,&apos;Disbursed&apos; )))</errorConditionFormula>
+        <errorDisplayField>PaymentStatus__c</errorDisplayField>
+        <errorMessage>Please make sure the Status is Paid and the Loan Approval Status is Disbursed</errorMessage>
+    </validationRules>
+</CustomObject>
